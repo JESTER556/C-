@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    bool k = false;
+    cout << "n="; cin >> n;
+
+    double* C = new double[n];
+
+    cout << "Enter " << n << " elements:\n";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> C[i];
+        if (C[i] == 0.0) k = true;
+    }
+
+    if (k)
+    {
+        for (int i = 0; i < n; i++)
+            if (C[i] == 0.0) cout << "Answer: " << i << " ";
+        cout << "\n";
+    }
+    else cout << "NO\n";
+
+    delete[]C;
+    system("pause");
+    return 0;
+}

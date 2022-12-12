@@ -1,0 +1,59 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main(void) 
+{
+
+int arr[4][6]; 
+
+for (int i = 0; i < 4; i++){
+    
+    for (int j = 0; j < 6; j++) {
+
+        arr[i][j] = rand() % 10;    // числа не більші за 10, можна змінювати
+        }
+    }
+    
+    for (int i = 0; i < 4; i++) {
+        
+        for (int j = 0; j < 6; j++) {
+            
+            
+            cout<<arr[i][j] << "\t";
+            }
+            
+            cout<< endl;                                     
+                
+                }
+            
+           if(true){
+                
+             int sum1;
+             int sum2;
+             int sum3;
+             int sum4;
+             int sum5;
+             int sum6;
+             int Together;
+             sum1 = arr[0][0]+arr[1][0]+arr[2][0]+arr[3][0]; //сума першого стовпчика
+             sum2 = arr[0][1]+arr[1][1]+arr[2][1]+arr[3][1]; //сума другого стовпчика
+             sum3 = arr[0][2]+arr[1][2]+arr[2][2]+arr[3][2]; //сума третього стовпчика
+             sum4 = arr[0][3]+arr[1][3]+arr[2][3]+arr[3][3]; //сума четвертого стовпчика
+             sum5 = arr[0][4]+arr[1][4]+arr[2][4]+arr[3][4]; //сума п'ятого стовпчика
+             sum6 = arr[0][5]+arr[1][5]+arr[2][5]+arr[3][5]; //сума шостого стовпчика
+             
+             cout << "\n" << "First: " << sum1;
+             cout << "\n" << "Second: " << sum2;
+             cout << "\n" << "Third: " << sum3;
+             cout << "\n" << "Fourth: " << sum4;
+             cout << "\n" << "Fifth: " << sum5;
+             cout << "\n" << "Sixth: " << sum6;
+             cout << "\n" << "Together: " << sum1+sum2+sum3+sum4+sum5+sum6;
+             
+        
+        }
+        
+           
+}

@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main(void) 
+{
+
+int arr[3][4]; // двовимірний масив розміром 4*3
+
+for (int i = 0; i < 3; i++){
+    
+    for (int j = 0; j < 4; j++) {
+
+        arr[i][j] = rand() % 10;    // числа не більші за 10, можна змінювати
+        }
+    }
+    
+    for (int i = 0; i < 3; i++) {
+        
+        for (int j = 0; j < 4; j++) {
+            
+            
+            cout<<arr[i][j] << "\t";
+            }
+            
+            cout<< endl;
+            }
+
+            
+            int q =arr[0][0];
+            for (int i = 1; i < 3; i++) {
+                
+                for (int j = 1; j < 4; j++){
+                    
+                    if(q>arr[i][j]){
+                        
+                        q = arr[i][j];
+                         
+                        }
+
+                    }
+
+                }
+cout <<"\n" << "Minimal: " << q;
+   }

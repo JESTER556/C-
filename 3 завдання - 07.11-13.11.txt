@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, i, max, min;
+    int nmax, nmin, temp; 
+
+    int m[100];
+    cout << m[i] << " ";
+    cin >> n;
+    for (i = 0; i < n; i++)
+        cin >> m[i];
+    max = m[0]; min = m[0];
+    for (i = 0; i < n; i++) {
+
+        if (max < m[i])
+        {
+            max = m[i];
+            nmax = i;
+        }
+
+        if (min > m[i])
+        {
+            min = m[i];
+            nmin = i;
+        }
+    }
+
+    temp = m[nmin];
+    m[nmin] = m[nmax];
+    m[nmax] = temp;
+    for (i = 0; i < n; i++)
+        cout << m[i] << " ";
+
+    return 0;
+
+}

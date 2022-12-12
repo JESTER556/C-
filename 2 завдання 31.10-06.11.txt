@@ -1,0 +1,59 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void printArray(int array[], int length)
+{
+    for (int i = 0; i < length; i++)
+    {
+        cout << array[i] << " ";
+    }
+    cout << endl;
+}
+
+int main()
+{
+    srand(time(NULL));
+    int n = 0, * arr, max;
+    do
+    {
+        cout << "Enter arry size: ";
+        cin >> n;
+        if (n < 1)
+        {
+            cout << "Array size can not be less than 1" << endl;
+        }
+    } while (n < 1);
+    arr = new int[n];
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = rand() % 20 - 10;
+        if (arr[i] < 0)
+        {
+            arr[i]++;
+        }
+    }
+    printArray(arr, n);
+    max = arr[0];
+    for (int i = 0; i < n; i++)
+    {
+        if (max < arr[i])
+        {
+            max = arr[i];
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == max)
+        {
+            break;
+        }
+        if (arr[i] < 0)
+        {
+            arr[i] = 0;
+        }
+    }
+    printArray(arr, n);
+    delete[]arr;
+    return 0;
+}

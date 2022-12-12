@@ -1,0 +1,57 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main(void) 
+{
+
+int arr[5][7]; // двовимірний масив розміром 4*3
+
+for (int i = 0; i < 5; i++){
+    
+    for (int j = 0; j < 7; j++) {
+
+        arr[i][j] = rand() % 10;    // числа не більші за 10, можна змінювати
+        }
+    }
+    
+    for (int i = 0; i < 5; i++) {
+        
+        for (int j = 0; j < 7; j++) {
+            
+            
+            cout<<arr[i][j] << "\t";
+            }
+            
+            cout<< endl;                                     
+                
+                }
+            
+           if(true){
+                
+             int sum1;
+             int sum2;
+             int sum3;
+             int sum4;
+             int sum5;
+             int Together;
+             sum1 = arr[0][0]+arr[0][1]+arr[0][2]+arr[0][3]+arr[0][4]+arr[0][5]+arr[0][6]; //сума першого рядка
+             sum2 = arr[1][0]+arr[1][1]+arr[1][2]+arr[1][3]+arr[1][4]+arr[1][5]+arr[1][6]; //сума другого рядка
+             sum3 = arr[2][0]+arr[2][1]+arr[2][2]+arr[2][3]+arr[2][4]+arr[2][5]+arr[2][6]; //сума третього рядка
+             sum4 = arr[3][0]+arr[3][1]+arr[3][2]+arr[3][3]+arr[3][4]+arr[3][5]+arr[3][6]; //сума четвертого рядка
+             sum5 = arr[4][0]+arr[4][1]+arr[4][2]+arr[4][3]+arr[4][4]+arr[4][5]+arr[4][6]; //сума першого рядка
+             
+             cout << "\n" << "First: " << sum1;
+             cout << "\n" << "Second: " << sum2;
+             cout << "\n" << "Third: " << sum3;
+             cout << "\n" << "Fourth: " << sum4;
+             cout << "\n" << "Fifth: " << sum5;
+             cout << "\n" << "Together: " << sum1+sum2+sum3+sum4+sum5;
+             
+        
+        }
+        
+           
+}
+

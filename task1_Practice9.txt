@@ -1,0 +1,45 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void printArray(int array[], int length)
+{
+    for (int i = 0; i < length; i++)
+    {
+        cout << array[i] << " ";
+    }
+    cout << endl;
+}
+void bubbleSort(int array[], int length, bool reverse = false)
+{
+    int temp;
+    for (int i = 0; i < length - 1; i++)
+    {
+        for (int j = 0; j < length - 1; j++)
+        {
+            if ((array[j] > array[j + 1] && !reverse) || (array[j] < array[j + 1] && reverse))
+            {
+                temp = array[j + 1];
+                array[j + 1] = array[j];
+                array[j] = temp;
+            }
+        }
+    }
+}
+
+int main()
+{
+    srand(time(NULL));
+    const int m = 12;
+    int arr[m];
+    for (int i = 0; i < m; i++)
+    {
+        arr[i] = rand() % 10;
+    }
+    printArray(arr, m);
+    bubbleSort(arr, m);
+    printArray(arr, m);
+    bubbleSort(arr, m, true);
+    printArray(arr, m);
+    return 0;
+}
